@@ -1,19 +1,25 @@
-
-export const links = [
+import { AiOutlineProduct } from "react-icons/ai";
+import { IoSettingsOutline } from "react-icons/io5";
+import { MdSpaceDashboard } from "react-icons/md";
+import { RiTeamFill } from "react-icons/ri";
+export const dashboardLinks = [
+  { id: 1, name: "Home", href: "/dashboard", icon: <MdSpaceDashboard /> },
   {
-    name: "Home",
-    href: "/home",
-    icon: "svg/dashboard.svg", // Replace HomeIcon with the actual icon component you're using
+    id: 2,
+    name: "Add Project Detail",
+    href: "/dashboard/add-project-detail",
+    icon: <AiOutlineProduct />,
   },
   {
-    name: "About",
-    href: "/about",
-    icon: "svg/dashboard.svg", // Replace AboutIcon with the actual icon component you're using
+    id: 3,
+    name: "Add Team Detail",
+    href: "/dashboard/add-team",
+    icon: <RiTeamFill />,
   },
   {
-    name: "Contact",
-    href: "/contact",
-    icon: "svg/dashboard.svg", // Replace ContactIcon with the actual icon component you're using
+    id: 4,
+    name: "Settings",
+    href: "/dashboard/settings",
+    icon: <IoSettingsOutline />,
   },
-  // Add more links as needed
 ];

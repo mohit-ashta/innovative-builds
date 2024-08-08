@@ -8,11 +8,11 @@ export const HomeTemplate = () => {
     <p
     className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}
   >
-    <strong>Welcome to Acme.</strong> This is the example for the{' '}
-    <Link href="/dashboard" className="text-blue-500">
+    <strong>Welcome to Construction</strong> 
+    <Link href="/dashboard" className="ml-3 text-blue-500">
     go dashboard
     </Link>
-    , brought to you by Vercel.
+    
   </p>
   )
 }

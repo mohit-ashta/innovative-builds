@@ -1,14 +1,8 @@
+import Image from "next/image";
 
-
-import Link from 'next/link';
-
-import Image from 'next/image';
- 
 export default function Page() {
   return (
-    // ...
     <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
-      {/* Add Hero Images Here */}
       <Image
         src="/images/bg.png"
         width={1000}
@@ -17,7 +11,7 @@ export default function Page() {
         alt="Screenshots of the dashboard project showing desktop version"
       />
       <Image
-              src="/images/bg.png"
+        src="/images/bg.png"
         width={560}
         height={620}
         className="block md:hidden"

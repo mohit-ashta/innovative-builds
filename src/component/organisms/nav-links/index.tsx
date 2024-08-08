@@ -1,25 +1,23 @@
 
-  import { links } from '@/constants/links/inedx';
-import Image from 'next/image';
+import { dashboardLinks } from '@/constants/links/inedx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-   
-  // ...
-   
+
   export  const NavLinks =()=> {
     const pathname = usePathname();
  
     return (
       <>
-        {links.map((link) => {
+        {dashboardLinks.map((item) => {
           return (
             <Link
-              key={link.name}
-              href={link.href}
-              className={`flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3 items-center${pathname ==link.href}`}
-            ><div className=''>
-                <Image src={link.icon} width={20} height={10}  alt='logo' /></div>
-              <p className="hidden md:block">{link.name}</p> 
+              key={item.id}
+              href={item.href} passHref
+              className={`flex items-center justify-start gap-2 font-lusitana  font-[600] bg-[#d7a888] p-5 text-sm  hover:bg-[#f1e9e6] hover:text-[#d7a888]  ${pathname ==item.href &&"bg-[#f1e9e6] text-[#d7a888] "}`}
+            ><div className='flex items-center gap-3 text-lg'>
+               <span>{item.icon}</span>
+              <p className="hidden md:block">{item.name}</p> 
+              </div>
             </Link>
           );
         })}
